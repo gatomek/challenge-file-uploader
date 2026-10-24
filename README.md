@@ -14,7 +14,7 @@
 ## RAND
 
 * unplugin-fonts
-* how does it work - is the uploaded file is in memory on server while receiving?
+* how does it work - is the uploaded file kept in memory on server while it is being received?
 * temporary files localization and management
 
 ## Links
