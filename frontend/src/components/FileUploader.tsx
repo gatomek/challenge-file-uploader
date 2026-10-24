@@ -46,7 +46,7 @@ export function FileUploader() {
             <h2>File Uploader</h2>
             <section>
                 <div>
-                    <input type={"file"} onChange={handleFileChange}/>
+                    <input type={"file"} onChange={handleFileChange} aria-label="File to upload"/>
                     {file &&
                         <div className={styles.root}>
                             <p>File name: {file.name}</p>
@@ -61,13 +61,13 @@ export function FileUploader() {
 
             </section>
             {status === 'success' &&
-                <div>Sukces</div>
+                <div>Success</div>
             }
             {status === 'error' &&
-                <div>Błąd</div>
+                <div>Error</div>
             }
             {status === 'uploading' &&
-                <div>Postęp: {uploadProgress}%</div>
+                <div>Progress: {uploadProgress}%</div>
             }
         </>
     )
