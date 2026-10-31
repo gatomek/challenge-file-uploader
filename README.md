@@ -1,15 +1,15 @@
 # File Upload Challenge
 
 ## Release Notes
-* 2026-10-24 -  progress bar added
- 
+
+* 2026-10-24 - progress bar added
+* 2026-10-30 - upload of many files
+* 2026-10-30 - add mixed data upload (note for uploaded data)
+
 ## Backlog
 
 * usage of Tailwind CSS in React project
-* upload of many files
 * add drop handler
-* add crop functionality
-* add mixed data upload (note for uploaded data)
 
 ## RAND
 
