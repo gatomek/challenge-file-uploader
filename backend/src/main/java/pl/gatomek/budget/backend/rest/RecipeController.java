@@ -19,8 +19,8 @@ public class RecipeController {
     private final RecipeService recipeService;
 
     @PostMapping(path = "/recipe", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public Confirmation makeRecipe(@RequestPart(name = "message") Message message,
-                                   @RequestPart(name = "file") List<MultipartFile> file) {
-        return recipeService.makeRecipe();
+    public Confirmation processUploadedFiles(@RequestPart(name = "message") Message message,
+                                             @RequestPart(name = "file") List<MultipartFile> file) {
+        return recipeService.makeConfirmation();
     }
 }

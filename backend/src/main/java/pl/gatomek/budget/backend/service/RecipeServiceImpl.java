@@ -7,7 +7,7 @@ import java.time.Instant;
 
 @Service
 class RecipeServiceImpl implements RecipeService {
-    public Confirmation makeRecipe() {
+    public Confirmation makeConfirmation() {
         return new Confirmation(Instant.now());
     }
 }
