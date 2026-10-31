@@ -30,7 +30,7 @@ export function FileUploader() {
         const formData = new FormData();
         files.forEach(f => formData.append('file', f));
         formData.append('message', new Blob(
-            [JSON.stringify({content: ''})],
+            [JSON.stringify({content: new Date().toISOString()})],
             {type: 'application/json'}));
         try {
             await axios.post("http://localhost:50000/recipe", formData, {
@@ -70,11 +70,13 @@ export function FileUploader() {
                     <div className={styles.root}>
                         <table border={1} className={styles.table}>
                             <thead>
-                            <th className={styles.th}>&nbsp;</th>
-                            <th className={styles.th}>Name</th>
-                            <th className={styles.th}>Size</th>
-                            <th className={styles.th}>Type</th>
-                            <th className={styles.th}>&nbsp;</th>
+                            <tr>
+                                <th className={styles.th}>&nbsp;</th>
+                                <th className={styles.th}>Name</th>
+                                <th className={styles.th}>Size</th>
+                                <th className={styles.th}>Type</th>
+                                <th className={styles.th}>&nbsp;</th>
+                            </tr>
                             </thead>
                             {files.map((file, index) =>
                                 <tr key={file.name}>
